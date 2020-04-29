@@ -12,9 +12,9 @@ Used in bachelor project at ITU.
     + The program is designed around having 3 different database and elasticsearch indexes of various sizes: 10K, 100K, and 1000K. 
     This was to test the scalability of the different technologies. 
 4. Create a MySQL fulltext index on (title, content) in all of the databases: 
-    + ALTER TABLE article
+    + SQL query to run: ALTER TABLE article
     ADD FULLTEXT(content, title);
-    + can take some time on the big databases
+    + can take some time on the big databases.
 5. Open up the compare_settings.py and fill in the settings for your setup.
 
 ## Elasticsearch_query_comparison.py
