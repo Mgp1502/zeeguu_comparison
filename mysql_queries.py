@@ -3,7 +3,7 @@ from sqlalchemy_fulltext import FullText, FullTextMode, FullTextSearch
 from zeeguu_core.model import Article
 
 
-def build_mysql_query(mysql, count, search_terms, topics, unwanted_topics, user_topics, unwanted_user_topics, language,
+def mysql_fulltext_query(mysql, count, search_terms, topics, unwanted_topics, user_topics, unwanted_user_topics, language,
                       upper_bounds,
                       lower_bounds):
     class FulltextContext(FullText):
@@ -55,7 +55,7 @@ def build_mysql_query(mysql, count, search_terms, topics, unwanted_topics, user_
     return query.limit(count)
 
 
-def old_mysql_query(mysql, count, search_terms, topics, unwanted_topics, user_topics, unwanted_user_topics, language,
+def base_mysql_query(mysql, count, search_terms, topics, unwanted_topics, user_topics, unwanted_user_topics, language,
                     upper_bounds,
                     lower_bounds):
     query = mysql.query(Article)

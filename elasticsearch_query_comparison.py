@@ -4,7 +4,7 @@ from elasticsearch import Elasticsearch
 import sqlalchemy as database
 from sqlalchemy.orm import sessionmaker
 from zeeguu_core.elastic.elastic_query_builder import build_elastic_query
-from comparison.mysqlFullText import mysql_fulltext_query, base_mysql_query
+from mysql_queries import mysql_fulltext_query, base_mysql_query
 from timeit import default_timer as timer
 from zeeguu_core.model import Language
 import csv
